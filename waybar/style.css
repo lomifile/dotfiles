@@ -1,0 +1,124 @@
+@define-color bg-dark rgba(28, 28, 30, 0.88);
+@define-color bg-darker rgba(19, 19, 21, 0.95);
+@define-color border-color rgba(60, 60, 62, 0.9);
+@define-color text-primary #F5F5F7;
+@define-color text-secondary #86868B;
+@define-color accent #3BA776;
+@define-color accent-soft rgba(59, 167, 118, 0.15);
+@define-color accent-strong rgba(59, 167, 118, 0.6);
+
+* {
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "JetBrainsMono Nerd Font",
+    "SF Pro Text",
+    "Inter",
+    "CaskaydiaCove Nerd Font",
+    "Hack Nerd Font",
+    sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  border: none;
+}
+
+window#waybar {
+  background-color: @bg-dark;
+  color: @text-primary;
+  border-radius: 14px;
+  border: 1px solid @border-color;
+  padding: 0 10px;
+  margin: 8px 8px 0 8px;
+  box-shadow:
+    0 6px 20px rgba(0, 0, 0, 0.45),
+    0 0 0 1px rgba(255, 255, 255, 0.02);
+}
+
+window#waybar.hidden {
+  opacity: 0;
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+  margin: 0 4px;
+}
+
+#workspaces {
+  padding: 0 4px;
+}
+
+#workspaces button {
+  background: transparent;
+  color: @text-secondary;
+  padding: 0 10px;
+  margin: 4px 3px;
+  border-radius: 999px;
+  min-width: 22px;
+}
+
+#workspaces button:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: @text-primary;
+}
+
+#workspaces button.active {
+  background-color: @accent-soft;
+  color: @accent;
+}
+
+#workspaces button.urgent {
+  background-color: rgba(255, 69, 58, 0.18);
+  color: #ff453a;
+}
+
+#clock {
+  background: transparent;
+  color: @text-primary;
+  padding: 0 14px;
+  margin: 0 8px;
+  border-radius: 999px;
+  font-size: 15px;
+}
+
+#network,
+#pulseaudio,
+#battery {
+  background-color: @bg-darker;
+  color: @text-secondary;
+  padding: 0 10px;
+  margin: 4px 3px;
+  border-radius: 999px;
+  min-width: 28px;
+}
+
+#network {
+  min-width: 40px;
+}
+
+/* Wi-Fi connection */
+#network.wifi {
+  color: @accent;
+}
+
+#bluetooth {
+  background-color: @bg-darker;
+  color: @text-secondary;
+  padding: 0 10px;
+  margin: 4px 3px;
+  border-radius: 999px;
+  min-width: 24px;
+}
+
+#bluetooth.connected {
+  color: @accent;
+}
+
+#bluetooth.disabled,
+#bluetooth.off,
+#bluetooth.disconnected {
+  color: #ff453a;
+}
+
+/* Ethernet connection */

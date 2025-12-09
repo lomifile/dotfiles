@@ -1,0 +1,87 @@
+@define-color bg-spotlight rgba(22, 22, 24, 0.96);
+@define-color bg-input rgba(30, 30, 32, 1.0);
+@define-color bg-row rgba(24, 24, 26, 1.0);
+@define-color border-color rgba(80, 80, 84, 0.9);
+@define-color text-primary #F5F5F7;
+@define-color text-secondary #8E8E93;
+@define-color accent #3BA776;
+@define-color accent-soft rgba(59, 167, 118, 0.14);
+
+window {
+  background-color: transparent;
+  color: @text-primary;
+  border-radius: 0;
+  border: none;
+  padding: 0;
+}
+
+#outer-box {
+  background-color: @bg-spotlight;
+  border-radius: 16px;
+  border: 1px solid @border-color;
+  padding: 10px 12px;
+  margin: 16px 0;
+  min-width: 520px;
+  max-width: 640px;
+}
+
+#input {
+  background-color: @bg-input;
+  color: @text-primary;
+  border-radius: 999px;
+  border: 1px solid rgba(90, 90, 94, 0.9);
+  padding: 8px 14px;
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+
+#prompt {
+  color: @text-secondary;
+  margin-right: 6px;
+}
+
+#inner-box {
+  background-color: transparent;
+  padding: 4px 2px 2px 2px;
+}
+
+#scroll {
+  background-color: transparent;
+}
+
+#entry {
+  background-color: transparent;
+  color: @text-secondary;
+  padding: 6px 10px;
+  margin: 2px 0;
+  border-radius: 10px;
+  min-height: 26px;
+}
+
+#entry:selected {
+  background-color: @accent-soft;
+  color: @accent;
+}
+
+#entry:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: @text-primary;
+}
+
+#entry:selected:hover {
+  background-color: @accent-soft;
+  color: @accent;
+}
+
+#text {
+  color: inherit;
+  font-size: 13px;
+}
+
+#img {
+  margin-right: 8px;
+}
+
+#input:focus {
+  border-color: @accent;
+}
